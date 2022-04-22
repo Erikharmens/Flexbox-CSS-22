@@ -1,0 +1,61 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --primary-text: #1c1c1c;
+    --primary-white: #e9e9e9;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.flex-container {
+    height: 400px;
+    display: flex;
+    background-color: rgb(210, 210, 210);
+    /* justify-content: Always on the main axis */
+    /* justify-content: end; */
+    /* align-items: Always on the cross axis */
+    /* align-items: start; */
+    /* flex-wrap: wrap; */
+
+}
+
+.item {
+    flex: 1;
+    height: 100px;
+    background: #54a7d0;
+    color: var(--primary-text);
+    margin: 10px;
+    border-radius: 4px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* -- Select a specific div with :nth-of-type(index) -- */
+.item:nth-of-type(1) {
+    align-self: end;
+    /* select order of placement with "order: 1" */
+}
+
+.item:nth-of-type(2) {
+    order: 2;
+}
+
+.item:nth-of-type(3) {
+    flex-grow: 2;
+}
+
+.item:nth-of-type(4) {
+    flex-shrink: 3;
+}
+
+.item:nth-of-type(5) {
+    align-self: center;
+}
